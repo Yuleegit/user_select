@@ -1,0 +1,613 @@
+/* Tab内容基础样式 */
+.tab-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #8c8c8c;
+}
+
+.tab-header {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.tab-search {
+  width: 100%;
+}
+
+.tab-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.tab-empty {
+  margin: 40px 0;
+}
+
+/* 布局样式 */
+.tab-layout {
+  display: flex;
+  height: 100%;
+}
+
+.tab-sidebar {
+  width: 280px;
+  border-right: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+}
+
+.sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+}
+
+.sidebar-header h4 {
+  margin: 0;
+  color: #262626;
+  font-weight: 600;
+}
+
+.sidebar-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.tab-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 树形组件样式 */
+.org-tree,
+.group-tree,
+.role-tree {
+  background: transparent;
+}
+
+.org-tree-node,
+.group-tree-node,
+.role-tree-node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.node-name {
+  font-size: 14px;
+  color: #262626;
+  flex: 1;
+}
+
+.node-position {
+  font-size: 12px;
+  color: #8c8c8c;
+  margin-left: 4px;
+}
+
+.group-icon,
+.role-icon {
+  color: #1890ff;
+  font-size: 16px;
+}
+
+.member-count {
+  margin-left: auto;
+}
+
+/* 最近联系人卡片样式 */
+.contact-grid {
+  width: 100%;
+}
+
+.contact-card {
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #f0f0f0;
+}
+
+.contact-card:hover {
+  border-color: #1890ff;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.15);
+}
+
+.contact-card.selected {
+  border-color: #1890ff;
+  background-color: #e6f7ff;
+}
+
+.contact-card-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.contact-avatar {
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-details {
+  font-size: 12px;
+  color: #8c8c8c;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-position {
+  color: #595959;
+}
+
+.contact-department {
+  color: #8c8c8c;
+}
+
+.contact-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #8c8c8c;
+  margin-top: 4px;
+}
+
+.contact-time-icon {
+  font-size: 12px;
+}
+
+.contact-time {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-selected-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #1890ff;
+  font-weight: bold;
+  font-size: 16px;
+  background: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 已选择人员卡片样式 */
+.selected-grid {
+  width: 100%;
+}
+
+.selected-item-card {
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #f0f0f0;
+}
+
+.selected-item-card:hover {
+  border-color: #ff4d4f;
+  box-shadow: 0 2px 8px rgba(255, 77, 79, 0.15);
+}
+
+.selected-item-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.selected-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.selected-item-name {
+  font-size: 12px;
+  color: #262626;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selected-item-position {
+  font-size: 10px;
+  color: #8c8c8c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove-button {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  padding: 0;
+  border-radius: 50%;
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.selected-item-card:hover .remove-button {
+  opacity: 1;
+}
+
+.remove-button:hover {
+  background: #ff7875;
+  color: white;
+}
+
+/* 列表项样式 */
+.contact-item,
+.employee-item,
+.member-item,
+.search-result-item {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.contact-item:hover,
+.employee-item:hover,
+.member-item:hover,
+.search-result-item:hover {
+  background-color: #f5f5f5;
+  border-color: #d9d9d9;
+}
+
+.contact-item.selected,
+.employee-item.selected,
+.member-item.selected,
+.search-result-item.selected {
+  background-color: #e6f7ff;
+  border-color: #91d5ff;
+}
+
+.contact-item-content,
+.employee-item-content,
+.member-item-content,
+.search-result-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-avatar,
+.employee-avatar,
+.member-avatar,
+.result-avatar {
+  flex-shrink: 0;
+}
+
+.contact-info,
+.employee-info,
+.member-info,
+.result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-name,
+.employee-name,
+.member-name,
+.result-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-details,
+.employee-details,
+.member-details,
+.result-subtitle {
+  font-size: 12px;
+  color: #8c8c8c;
+  margin-bottom: 2px;
+}
+
+.contact-position,
+.employee-position,
+.member-position {
+  color: #595959;
+}
+
+.contact-department,
+.employee-department,
+.member-department {
+  color: #8c8c8c;
+}
+
+.contact-email,
+.employee-email,
+.member-email {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.contact-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #8c8c8c;
+  margin-top: 4px;
+}
+
+.contact-time-icon {
+  font-size: 12px;
+}
+
+.contact-time {
+  font-size: 12px;
+}
+
+.contact-selected-indicator,
+.employee-selected-indicator,
+.member-selected-indicator,
+.result-selected-indicator {
+  color: #1890ff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 高级搜索样式 */
+.advanced-search-tab {
+  padding: 16px;
+}
+
+.search-config {
+  margin-bottom: 24px;
+}
+
+.search-config-card {
+  border-radius: 8px;
+}
+
+.advanced-search-input {
+  width: 100%;
+}
+
+.search-types {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.search-types-label {
+  font-size: 14px;
+  color: #262626;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.search-results {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.results-header h4 {
+  margin: 0;
+  color: #262626;
+  font-weight: 600;
+}
+
+.results-count {
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+.results-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.search-results-list {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.result-type {
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.result-path {
+  font-size: 12px;
+  color: #bfbfbf;
+  margin-top: 2px;
+}
+
+/* 列表样式 */
+.contact-list,
+.employee-list,
+.member-list,
+.search-results-list {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.contact-list .ant-list-item,
+.employee-list .ant-list-item,
+.member-list .ant-list-item,
+.search-results-list .ant-list-item {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0;
+}
+
+.contact-list .ant-list-item:last-child,
+.employee-list .ant-list-item:last-child,
+.member-list .ant-list-item:last-child,
+.search-results-list .ant-list-item:last-child {
+  border-bottom: none;
+}
+
+/* 分页样式 */
+.ant-pagination {
+  margin: 16px 0 0 0;
+  text-align: center;
+}
+
+/* 常用群组和系统角色页的左侧区域样式 */
+.groups-tab .tab-sidebar,
+.roles-tab .tab-sidebar {
+  min-height: 500px;
+  background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+}
+
+.groups-tab .sidebar-body,
+.roles-tab .sidebar-body {
+  min-height: 450px;
+  background: white;
+  margin: 8px;
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .tab-layout {
+    flex-direction: column;
+  }
+  
+  .tab-sidebar {
+    width: 100%;
+    height: 200px;
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .groups-tab .tab-sidebar,
+  .roles-tab .tab-sidebar {
+    min-height: 300px;
+  }
+  
+  .groups-tab .sidebar-body,
+  .roles-tab .sidebar-body {
+    min-height: 250px;
+  }
+  
+  .search-types {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .contact-card-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .selected-item-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
+  
+  .remove-button {
+    position: static;
+    opacity: 1;
+    margin-top: 4px;
+  }
+}
+
+/* 滚动条样式 */
+.tab-body::-webkit-scrollbar,
+.sidebar-body::-webkit-scrollbar,
+.results-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tab-body::-webkit-scrollbar-track,
+.sidebar-body::-webkit-scrollbar-track,
+.results-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.tab-body::-webkit-scrollbar-thumb,
+.sidebar-body::-webkit-scrollbar-thumb,
+.results-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.tab-body::-webkit-scrollbar-thumb:hover,
+.sidebar-body::-webkit-scrollbar-thumb:hover,
+.results-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+} 

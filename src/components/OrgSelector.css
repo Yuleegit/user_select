@@ -1,0 +1,142 @@
+.org-selector {
+  display: inline-block;
+}
+
+.org-selector-trigger {
+  min-height: 32px;
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.org-selector-trigger:hover {
+  border-color: #4096ff;
+}
+
+.org-selector-trigger.disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  color: #bfbfbf;
+}
+
+.org-selector-trigger .placeholder {
+  color: #bfbfbf;
+}
+
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+.selected-tags .ant-tag {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.org-selector-content {
+  padding: 0;
+}
+
+/* Tab样式 */
+.org-selector-tabs {
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.org-selector-tabs .ant-tabs-nav {
+  margin: 0;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.org-selector-tabs .ant-tabs-tab {
+  margin: 0;
+  padding: 12px 16px;
+  border-right: 1px solid #f0f0f0;
+}
+
+.org-selector-tabs .ant-tabs-tab:last-child {
+  border-right: none;
+}
+
+.org-selector-tabs .ant-tabs-tab-active {
+  background: white;
+  border-bottom: 2px solid #1890ff;
+}
+
+.org-selector-tabs .ant-tabs-content-holder {
+  height: 400px;
+  overflow: hidden;
+}
+
+.org-selector-tabs .ant-tabs-tabpane {
+  height: 100%;
+  padding: 0;
+}
+
+/* 已选择人员样式 */
+.selected-section {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.selected-grid {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .org-selector-trigger {
+    min-height: 40px;
+  }
+  
+  .selected-tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .org-selector-tabs .ant-tabs-nav {
+    flex-wrap: wrap;
+  }
+  
+  .org-selector-tabs .ant-tabs-tab {
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+  }
+}
+
+/* 滚动条样式 */
+.selected-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selected-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.selected-grid::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.selected-grid::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+} 
